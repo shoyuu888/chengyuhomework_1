@@ -57,10 +57,12 @@
       <a href="https://www.klook.com/zh-TW/blog/attractions-kenting-pingtung-taiwan/" target="_blank">行程A</a>
       <a href="https://mimihan.tw/kenting-travel/" target="_blank">行程B</a>
     </br>
-      <ol start="2" >
-        <li></li>
-      </ol>
-      <div class="column1"><form>
+      <div class="column1">
+        <ol start="2" >
+          <li></li>
+        </ol>
+        <div class="form">
+        <form action="rinfo.php" method="get" width="80%">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
         <label for="email">Email:</label><br>
@@ -68,28 +70,31 @@
         <label for="tel">tel:</label><br>
         <input type="text" id="tel" name="tel"><br>
         <label for="gender">Gender:</label><br>
-        <input type="radio" id="gender" name="gender">M
-        <input type="radio" id="gender" name="gender">F
-        <input type="radio" id="gender" name="gender">others<br>
+        <input type="radio" id="gender" name="gender" value="1">M
+        <input type="radio" id="gender" name="gender" value="2">F
+        <input type="radio" id="gender" name="gender" value="3">others<br>
         <label for="pre">Food preferences:</label><br>
-        <input type="checkbox" id="pre" name="pre">牛排
-        <input type="checkbox" id="pre" name="pre">豬排
-        <input type="checkbox" id="pre" name="pre">羊排
-        <input type="checkbox" id="pre" name="pre">雞排
-        <input type="checkbox" id="pre" name="pre">魚排<br>
+        <input type="checkbox" id="pre" name="pre[]" value="牛排">牛排
+        <input type="checkbox" id="pre" name="pre[]" value="豬排">豬排
+        <input type="checkbox" id="pre" name="pre[]" value="羊排">羊排
+        <input type="checkbox" id="pre" name="pre[]" value="雞排">雞排
+        <input type="checkbox" id="pre" name="pre[]" value="魚排">魚排<br>
         <label for="size">T-shirt size:</label><br>
         <SELECT id="size" name="size">
-          <option value="S">S</option>
-          <option value="S">M</option>
-          <option value="S">L</option>
-          <option value="S">XL</option>
+          <option value="1">S</option>
+          <option value="2">M</option>
+          <option value="3">L</option>
+          <option value="4">XL</option>
         </SELECT>
         <br>
         <label for="color">T-shirt color:</label><br>
         <input type="text" id="color" name="color"><br>
         <label for="name">birthday:</label><br>
         <input type="text" id="birthday" name="birthday"><br>
-      </form></div>
+        <input type="submit" value="Submit">
+      </form>
+      </div>
+    </div>
       
     </div>
     </div>
