@@ -18,8 +18,8 @@
             <div class="logo"></div>
             <div class="nav">
                 <ul>
-                    <li><a href="">登入</a></li>
-                    <li><a href="">註冊</a></li>
+                    <li><a href="hw/login.php">登入</a></li>
+                    <li><a href="hw/enroll.php">註冊</a></li>
                 </ul>
             </div>
         </div>
@@ -92,7 +92,7 @@
           <option value="4">黑</option>
         </SELECT>
         <br>
-        <input type="submit" value="Submit">
+        <input type="submit" value="確認送出">
       </form>
         </div>
     
@@ -104,7 +104,7 @@
     </div>
     <div class="full-width clearfix" id="contact">
         <div class="fixed-width-sm">
-            <h3>WELCOM!!</h3>
+            <h3>WELCOME!!</h3>
             <p>高雄市楠梓區高雄大學路400號</p>
             <div id="connect">
                 <h3>連結</h3>
