@@ -39,9 +39,9 @@
             </div>
             <div id="our-story-gallery">
                 <div class="form">
-                    <form action="rinfo.php" method="get">
+                    <form action="Jrinfo.php" method="get">
                     <label for="account">帳號</label><br>
-                    <input type="text" id="account" name="account" placeholder="請輸入您的帳號">
+                    <input type="text" id="account" name="account" placeholder="請輸入您的email或電話號碼">
                     <br>
                     <label for="password">密碼</label><br>
                     <input type="text" id="password" name="password" placeholder="請輸入您的密碼">

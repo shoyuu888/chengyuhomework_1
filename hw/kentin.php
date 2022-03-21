@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="global.css">
-   <link rel="stylesheet" href="desktop_enroll.css" media="screen and (min-width:960px)">  
+   <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">  
    <link rel="stylesheet" href="phone.css" media="screen and (max-width:959px)">  
 </head>
 <body>
@@ -18,19 +18,42 @@
             <div class="logo"></div>
             <div class="nav">
                 <ul>
-                    <li><a href="login.php">已經有帳號了？</a></li>
+                    <li><a href="login.php">登入</a></li>
+                    <li><a href="enroll.php">註冊</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <!-- <div class="full-width" id="header">
+    <div class="full-width" id="header">
         <div id="overlay">
-            <h1>登入</h1>
-             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quas labore voluptatem consequatur rem odio eligendi esse sunt dolores.</p> -->
-        <!-- </div> -->
-    <!-- </div> --> 
+            <h1>墾丁三日遊</h1>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quas labore voluptatem consequatur rem odio eligendi esse sunt dolores.</p> -->
+        </div>
+    </div>
     <div class="full-width clearfix">
-    <div class="formdiv">
+        <div class="fixed-width">
+            <div id="our-story">
+                <h2 class="title">行程內容</h2>
+                <p class="article">
+                  <a href="https://www.klook.com/zh-TW/blog/attractions-kenting-pingtung-taiwan/" target="_blank">行程A</a>
+                  <a href="https://mimihan.tw/kenting-travel/" target="_blank">行程B</a>
+                </p>
+            </div>
+            <div id="our-story-gallery">
+                <div class="gallery"><img src="images/164333447524625_P15622163.jpg"></div>
+                <div class="gallery"><img src="images/hdralnin15emw2q6b4z1.jpg"></div>
+                <div class="gallery"><img src="images/images.jpg"></div>
+                <div class="gallery"><img src="images/kenting.jpg"></div>
+            </div>
+        </div>
+    </div>
+    <div class="full-width" id="craft">
+<!--        <h2>SIMPLE <ins>CRAFT</ins></h2>-->
+        <h2 class="cover-title">輕 <span class="under-line">旅行</span></h2>
+    </div>
+    <div class="full-width clearfix">
+
+        <div class="formdiv">
         <form action="rinfo.php" method="post">
         <!-- <label for="name">Name:</label><br>
         <input type="text" id="name" name="name"><br>
@@ -42,25 +65,35 @@
         <input type="radio" id="gender" name="gender" value="1">M
         <input type="radio" id="gender" name="gender" value="2">F
         <input type="radio" id="gender" name="gender" value="3">others<br> -->
-        <label for="name">姓名：</label>
-        <input type="text" id="name" name="name" placeholder="請填上您的姓名" required><br>
-        <label for="email">EMAIL：</label>
-        <input name="email" id="email" type="email" placeholder="請填寫您的電子郵件" required><br>
-        <label for="tel">電話：</label>
-        <input name="tel" id="tel" pattern='\d{4}[-]\d{6}' placeholder="請輸入格式0987-123456" required><br>
-        <label for="password">設定密碼：</label>
-        <input type="password" id="password" name="password" placeholder="請填入您的密碼" required><br>
-        <label for="birthday">出生日期：</label>
-        <input name="birthday" id="birthday" pattern='\d{4}[/]\d{2}[/]\d{2}' placeholder="請輸入格式YYYY/MM/DD" required><br>
-        <label for="gender">性別：</label>
-        <input type="radio" id="gender1" name="gender" value="1"><label for="gender1">男性</label>
-        <input type="radio" id="gender2" name="gender" value="2"><label for="gender2">女性</label>
-        <input type="radio" id="gender3" name="gender" value="3"><label for="gender3">其他</label><br>
+        <label for="trip">選擇此次的行程</label><br>
+        <SELECT id="trip" name="trip">
+          <option value="1">A</option>
+          <option value="2">B</option>
+        </SELECT><br>
+        <label for="pre">選擇您想要的美食：</label><br>
+        <input type="checkbox" id="pre" name="pre[]" value="牛排">牛排
+        <input type="checkbox" id="pre" name="pre[]" value="豬排">豬排
+        <input type="checkbox" id="pre" name="pre[]" value="羊排">羊排
+        <input type="checkbox" id="pre" name="pre[]" value="雞排">雞排
+        <input type="checkbox" id="pre" name="pre[]" value="魚排">魚排<br>
+        <label for="size">選擇您的T-shirt size:</label><br>
+        <SELECT id="size" name="size">
+          <option value="1">S</option>
+          <option value="2">M</option>
+          <option value="3">L</option>
+          <option value="4">XL</option>
+        </SELECT>
+        <br>
+        <label for="color">選擇您喜歡的T-shirt顏色:</label><br>
+        <SELECT id="size" id="color" name="color">
+          <option value="1">紫</option>
+          <option value="2">黃</option>
+          <option value="3">薄荷綠L</option>
+          <option value="4">黑</option>
+        </SELECT>
+        <br>
         <input type="submit" value="確認送出">
       </form>
-    </div>
-
-    <div class="full-width clearfix">
         </div>
     
             <div id="our-bread-gallery">
