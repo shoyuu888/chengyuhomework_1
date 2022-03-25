@@ -1,3 +1,14 @@
+<?php
+
+$account = $_POST['account'];
+session_start();
+if(isset($_COOKIE["account"])){
+    echo "感謝".$account."回到本系統";
+}else{
+    echo "歡迎初次來到本系統";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +50,7 @@
             </div>
             <div id="our-story-gallery">
                 <div class="form">
-                    <form action="Jrinfo.php" method="get">
+                    <form action="loginProcess.php" method="post">
                     <label for="account">帳號</label><br>
                     <input type="text" id="account" name="account" placeholder="請輸入您的email或電話號碼">
                     <br>
@@ -66,7 +77,7 @@
                 <div class="bread-gallery"><img src="images/b2.jpg" alt=""></div>
             </div>
         </div>
-    </div> -->
+    </div> 
     <div class="full-width clearfix" id="contact">
         <div class="fixed-width-sm">
             <h3>WELCOME!!</h3>
@@ -95,5 +106,28 @@
             <a href="">DESIGN BY 醬油</a>
         </div>
     </div>
+
+<?php
+
+
+// header('Refresh:1');
+
+if(isset($_GET["account"])){
+    $account = $_POST['account'];
+    $password = $_POST['password'];
+    if(!empty($_GET['erron'])){
+        if($_GET['erron']== 1){
+            echo "使用者名稱密碼錯誤";
+        }elseif($_GET['erron'] == 2){
+            echo "請輸入使用者名稱密碼";
+        }elseif($_GET['erron'] == 3){
+            echo "非法訪問，滾";
+        }elseif($_GET['erron'] == 4){
+            echo "非法訪問，滾";
+        }
+    }
+}
+
+?>
 </body>
 </html>

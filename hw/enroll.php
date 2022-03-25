@@ -1,3 +1,24 @@
+<?php
+// session_start();
+// if(isset($_SESSION['login'])){
+//     if($_SESSION["login"]=="Yes"){
+//         echo "<a href='logout.php'>登出</a>";
+//     }else{
+//         echo "滾!!";
+//         exit();
+//     }
+// }else{
+//         echo "滾!!";
+//         exit();
+// }
+    session_start();
+    if(empty($_SESSION['account'])){
+        header('Location: login.php?errno=4');
+        exit();
+    }
+    echo"welcom".$account;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
