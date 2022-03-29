@@ -11,12 +11,7 @@
 //         echo "滾!!";
 //         exit();
 // }
-    session_start();
-    if(empty($_SESSION['account'])){
-        header('Location: login.php?errno=4');
-        exit();
-    }
-    echo"welcom".$account;
+
 ?>
 
 <!DOCTYPE html>

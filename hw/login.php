@@ -1,13 +1,3 @@
-<?php
-
-$account = $_POST['account'];
-session_start();
-if(isset($_COOKIE["account"])){
-    echo "感謝".$account."回到本系統";
-}else{
-    echo "歡迎初次來到本系統";
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -111,22 +101,23 @@ if(isset($_COOKIE["account"])){
 
 
 // header('Refresh:1');
+if(isset($_COOKIE["account"])){
+    $_cookieaccount = $_COOKIE["account"];
+    echo "感謝".$cookieaccount."回到本系統";
+}else{
+    echo "歡迎初次來到本系統";
+}
 
-if(isset($_GET["account"])){
-    $account = $_POST['account'];
-    $password = $_POST['password'];
-    if(!empty($_GET['erron'])){
-        if($_GET['erron']== 1){
-            echo "使用者名稱密碼錯誤";
-        }elseif($_GET['erron'] == 2){
-            echo "請輸入使用者名稱密碼";
-        }elseif($_GET['erron'] == 3){
-            echo "非法訪問，滾";
-        }elseif($_GET['erron'] == 4){
-            echo "非法訪問，滾";
+    if(!empty($_GET['error'])){
+        if($_GET['error']== 1){
+            echo "<br>使用者名稱密碼錯誤";
+        }elseif($_GET['error'] == 2){
+            echo "<br>請輸入使用者名稱密碼";
+        }elseif($_GET['error'] == 3){
+            echo "<br>非法訪問，滾";
         }
     }
-}
+
 
 ?>
 </body>

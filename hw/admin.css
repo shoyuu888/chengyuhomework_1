@@ -1,0 +1,19 @@
+#header {
+    background-color: #553279;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: helvetica;
+    text-align: center;
+    background-size: cover;
+}
+#overlay {
+    padding: 195px 0;
+    background-color: rgba(0,0,0,.3);
+}
+#overlay h1 {
+    font-size: 5em;
+}
+#overlay p {
+    width: 600px;
+    margin: auto;
+}
