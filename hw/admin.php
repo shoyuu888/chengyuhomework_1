@@ -1,10 +1,10 @@
 <?php
     session_start();
-    if(isset($_SESSION['account'])){
+    if(!isset($_SESSION['account'])){
+        echo "<a href='logout.php'>登出</a>";
+    }else{
         header('Location: login.php?error=3');
         exit();
-    }else{
-            echo "<a href='logout.php'>登出</a>";
     }
 ?>
 <!DOCTYPE html>
